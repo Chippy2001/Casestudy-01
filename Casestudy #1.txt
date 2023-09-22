@@ -1,0 +1,93 @@
+(1)
+
+function test_prime(n)
+{
+
+  if (n===1)
+  {
+    return false;
+  }
+  else if(n === 2)
+  {
+    return true;
+  }else
+  {
+    for(var x = 2; x < n; x++)
+    {
+      if(n % x === 0)
+      {
+        return false;
+      }
+    }
+    return true;  
+  }
+}
+
+console.log(test_prime(37));
+
+
+
+
+
+
+
+(2)
+
+
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
+
+
+
+
+
+
+(3)
+
+
+for (var x=0; x<=15; x++) {
+        if (x === 0) {
+                console.log(x +  " is even");
+        }
+        else if (x % 2 === 0) {
+                console.log(x + " is even");   
+        }
+        else {
+                console.log(x + " is odd");
+        }
+}
+
+
+
+
+
+
+
+(4)
+
+function sum_sq(array) {
+  var sum = 0, 
+      i = array.length;
+  while (i--) 
+   sum += Math.pow(array[i], 2);
+  return sum;
+}
+ 
+console.log(sum_sq([0,1,2,3,4])); 
